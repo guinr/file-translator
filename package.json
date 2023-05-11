@@ -1,0 +1,17 @@
+{
+  "name": "srt-translate",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/translate": "^7.2.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "multer": "^1.4.5-lts.1",
+    "p-limit": "^4.0.0"
+  }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Upload de Arquivos</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="app">
+		<form id="upload-form" @submit.prevent="submitForm" class="file-input-container">
+			<label for="file-input" class="file-input-label">Selecione o arquivo para tradução</label>
+			<button type="submit" id="submit-btn" :disabled="!file">{{ fileUploaded ? 'Enviar outro arquivo' : 'Enviar arquivo' }}</button>
+			<input type="file" id="file-input" name="file" @change="onFileChange">
+		</form>
+		<div id="loading" v-if="fileUploading">
+			<img src="loading.svg" alt="Loading...">
+			<p>Aguarde enquanto o arquivo é processado...</p>
+		</div>
+		<div id="download" v-if="fileUploaded">
+			<a :href="downloadUrl" id="download-link" :download="fileName">Download do arquivo processado</a>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>

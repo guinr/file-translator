@@ -1,0 +1,95 @@
+/* Estilos do formulário */
+form {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 1.2em;
+}
+
+.file-input-container {
+  position: relative;
+  display: flex;
+}
+
+input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-input-label {
+  display: block;
+  padding: 10px 15px;
+  background-color: #e0e0e0;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Estilos do loading */
+#loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+#loading img {
+  width: 100px;
+  height: 100px;
+}
+
+#loading p {
+  margin-top: 10px;
+}
+
+/* Estilos do link de download */
+#download {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#download-link {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+	text-decoration: none;
+}
+
+#download-link:hover {
+  background-color: #0d8bf0;
+}
+
+#download-link:active {
+  background-color: #0c7bd6;
+}
